@@ -4,13 +4,17 @@ import { ArrowRight, Menu, X } from 'lucide-react';
 export default function TourismWebsite() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-
+    const touristImages = [
+    'https://images.unsplash.com/photo-1599579810694-b5ac1795ce86?w=300&h=300&fit=crop',
+    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=300&fit=crop',
+    'https://images.unsplash.com/photo-1537225228614-56cc3556d7ed?w=300&h=300&fit=crop',
+    'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=300&h=300&fit=crop',
+    'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=300&h=300&fit=crop',
+  ];
   return (
     <div className="text-gray-900 font-sans" style={{ backgroundColor: '#F2F2F2' }}>
-
-
       {/* Navigation */}
-      <nav className="flex justify-between items-center px-8 py-4 border-b border-gray-300" style={{ backgroundColor: '#F2F2F2' }}>
+      <nav className="flex justify-between items-center px-4 md:px-8 py-4 border-b border-gray-300" style={{ backgroundColor: '#F2F2F2' }}>
         <div className="flex items-center gap-3">
           <div className="w-6 h-6 rounded" style={{ backgroundColor: '#102550' }}></div>
           <span className="font-bold text-base" style={{ color: '#102550' }}>Planora</span>
@@ -33,22 +37,48 @@ export default function TourismWebsite() {
         </button>
       </nav>
 
-      <div className="h-0"></div>
-
       {/* Hero Section */}
       <section className="relative min-h-screen overflow-hidden" style={{ backgroundColor: '#F2F2F2' }}>
         {/* Background Blobs - Layer 1 */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-40 right-1/3 w-96 h-96 bg-gradient-to-br from-yellow-300 via-orange-300 to-orange-500 rounded-full mix-blend-multiply filter blur-3xl opacity-25"></div>
           <div className="absolute -top-20 -right-20 w-80 h-80 bg-gradient-to-br from-purple-400 to-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full mix-blend-multiply filter blur-3xl opacity-20" style={{ background: `linear-gradient(to top left, #102550, #6366f1)` }}></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full mix-blend-multiply filter blur-3xl opacity-20" style={{ background: 'linear-gradient(to top left, #102550, #6366f1)' }}></div>
         </div>
 
         {/* Foreground Blobs - Layer 2 */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 right-1/4 w-80 h-80 bg-gradient-to-br from-yellow-400 via-orange-400 to-orange-600 rounded-full mix-blend-multiply filter blur-3xl opacity-45"></div>
           <div className="absolute top-1/3 right-0 w-96 h-96 bg-gradient-to-bl from-purple-500 to-pink-400 rounded-full mix-blend-multiply filter blur-3xl opacity-40"></div>
-          <div className="absolute bottom-20 right-1/3 w-72 h-72 rounded-full mix-blend-multiply filter blur-3xl opacity-30" style={{ background: `linear-gradient(to top left, #102550, #4f46e5)` }}></div>
+          <div className="absolute bottom-20 right-1/3 w-72 h-72 rounded-full mix-blend-multiply filter blur-3xl opacity-30" style={{ background: 'linear-gradient(to top left, #102550, #4f46e5)' }}></div>
+        </div>
+
+        {/* Tourist Images - Clustered on Right - Fully Responsive */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Image 1 - Top Right */}
+          <div className="absolute top-30 right-20 sm:right-8 md:right-12 w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-36 lg:h-36 rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition duration-300 hover:z-20">
+            <img src={touristImages[0]} alt="Tourist destination" className="w-full h-full object-cover" />
+          </div>
+
+          {/* Image 2 - Middle Right */}
+          <div className="absolute top-1/3 right-3 sm:right-6 md:right-8 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 hover:z-20">
+            <img src={touristImages[1]} alt="Travel adventure" className="w-full h-full object-cover" />
+          </div>
+
+          {/* Image 3 - Center Right - Largest */}
+          <div className="absolute top-1/2 right-6 sm:right-10 md:right-16 lg:right-20 w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition duration-300 hover:z-20">
+            <img src={touristImages[2]} alt="Sri Lanka experience" className="w-full h-full object-cover" />
+          </div>
+
+          {/* Image 4 - Bottom Right */}
+          <div className="absolute bottom-24 right-4 sm:right-8 md:right-12 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 hover:z-20">
+            <img src={touristImages[3]} alt="Cultural experience" className="w-full h-full object-cover" />
+          </div>
+
+          {/* Image 5 - Bottom Right Lower */}
+          <div className="absolute bottom-4 right-12 sm:right-16 md:right-24 lg:right-32 w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-36 lg:h-36 rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 hover:z-20">
+            <img src={touristImages[4]} alt="Travel memories" className="w-full h-full object-cover" />
+          </div>
         </div>
 
         <div className="relative flex items-center px-8 md:px-16 py-32 max-w-7xl mx-auto h-screen z-10">
@@ -78,8 +108,6 @@ export default function TourismWebsite() {
         </div>
       </section>
 
-
-
       {/* Models Section */}
       <section className="py-40 px-8 md:px-16 relative overflow-hidden min-h-screen flex items-center" style={{ backgroundColor: '#F2F2F2' }}>
         {/* Background Blobs - Layer 1 (Behind) */}
@@ -99,9 +127,8 @@ export default function TourismWebsite() {
         {/* Content */}
         <div className="max-w-7xl mx-auto relative z-10 grid md:grid-cols-2 gap-16 items-center w-full">
           <div>
-            <p className="text-teal-600 text-xs font-bold mb-6 tracking-widest">OUR FEATURES 🤖</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-900 leading-tight">
-              Revolutionizing Travel<br />Experiences in Sri Lanka
+               Travel<br />Experiences in Sri Lanka
             </h2>
             <p className="text-gray-700 text-base leading-relaxed">
               Planora combines AI-powered planning with real-time Sri Lankan insights to create unforgettable journeys.
@@ -110,7 +137,7 @@ export default function TourismWebsite() {
 
           <div className="relative h-96">
             {/* Chat UI Card */}
-            <div className="absolute right-0 top-0 bg-white rounded-xl shadow-2xl p-4 w-80">
+            <div className="absolute right-9 top-0 bg-white rounded-xl shadow-2xl p-4 w-72">
               <div className="flex items-center gap-2 mb-4 pb-3 border-b">
                 <div className="w-5 h-5 bg-orange-400 rounded"></div>
                 <span className="text-xs font-semibold text-gray-900">Knowledge agent</span>
@@ -136,7 +163,7 @@ export default function TourismWebsite() {
             </div>
 
             {/* Right Side - Icons */}
-            <div className="absolute right-8 top-96 space-y-8">
+            <div className="absolute right-3 top-96 space-y-8">
               <div className="w-14 h-14 bg-white/30 backdrop-blur-md rounded-lg shadow-lg flex items-center justify-center border border-white/40 hover:bg-white/40 transition">
                 <span className="text-2xl">👤</span>
               </div>
@@ -155,9 +182,9 @@ export default function TourismWebsite() {
           <div className="grid md:grid-cols-2 gap-16 items-start">
             <div>
               <div className="mb-8">
-                <div className="bg-orange-100 rounded-lg p-4 space-y-3">
+                <div className="bg-gray-300 rounded-lg p-4 space-y-3">
                   <div className="flex items-center gap-2 mb-4">
-                    <div className="w-5 h-5 bg-orange-400 rounded flex items-center justify-center text-white text-xs font-bold">P</div>
+                    <div className="w-5 h-5 bg-gray-400 rounded flex items-center justify-center text-white text-xs font-bold">P</div>
                     <p className="text-xs font-semibold text-gray-900">Planora AI Assistant</p>
                     <p className="text-xs text-gray-500">Live</p>
                   </div>
@@ -167,7 +194,7 @@ export default function TourismWebsite() {
                     <p className="text-xs text-gray-700">Help me plan my Sri Lanka trip</p>
                   </div>
                   
-                  <div className="bg-orange-50 rounded p-3">
+                  <div className="bg-gray-100 rounded p-3">
                     <p className="text-xs font-semibold text-gray-900 mb-2">Planora AI Assistant 3:10 AM</p>
                     <p className="text-xs text-gray-700 leading-relaxed mb-2">I'll help you create the perfect Sri Lankan adventure! Here's what I can do:</p>
                     
@@ -194,8 +221,7 @@ export default function TourismWebsite() {
             </div>
 
             <div>
-              <div className="mb-2 bg-purple-200 inline-block px-3 py-1 rounded text-xs font-bold text-purple-700">UNIQUE</div>
-              <p className="text-teal-600 text-xs font-bold mb-4 tracking-widest">PLANORA FEATURES</p>
+              <p className="text-blue-950-600 text-xs font-bold mb-4 tracking-widest">PLANORA FEATURES</p>
               <h3 className="text-3xl font-bold mb-6 text-gray-900">
                 Sri Lanka Travel<br />Intelligence System
               </h3>
@@ -239,7 +265,6 @@ export default function TourismWebsite() {
 
         <div className="max-w-7xl mx-auto relative z-10 grid md:grid-cols-2 gap-16 items-center w-full">
           <div>
-            <p className="text-teal-600 text-xs font-bold mb-4 tracking-widest">EMBED 🤖</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-900 leading-tight">
               AR Spatial Memory<br />Anchors
             </h2>
@@ -331,7 +356,6 @@ export default function TourismWebsite() {
           </div>
 
           <div className="order-1 md:order-2">
-            <p className="text-teal-600 text-xs font-bold mb-4 tracking-widest">RETRIEVAL & RERANK 🤖</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-900 leading-tight">
               Real-Time Destination<br />Risk & Sustainability<br />Alerts
             </h2>
@@ -454,16 +478,6 @@ export default function TourismWebsite() {
                   <li><a href="#" className="hover:text-white">Disclaimer</a></li>
                 </ul>
               </div>
-
-              <div>
-                <p className="font-semibold text-white mb-6 text-xs uppercase tracking-wider">Contact</p>
-                <ul className="space-y-3 text-xs">
-                  <li><a href="#" className="hover:text-white">Twitter</a></li>
-                  <li><a href="#" className="hover:text-white">LinkedIn</a></li>
-                  <li><a href="#" className="hover:text-white">Discord</a></li>
-                  <li><a href="#" className="hover:text-white">Support</a></li>
-                </ul>
-              </div>
             </div>
 
             <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
@@ -474,7 +488,7 @@ export default function TourismWebsite() {
                 <a href="#" className="hover:text-white">Twitter</a>
                 <a href="#" className="hover:text-white">Contact</a>
               </div>
-              <p className="text-xs text-gray-600">Privacy     Terms of Use     @Planora 2024</p>
+              <p className="text-xs text-gray-600">Privacy • Terms of Use • @Planora 2024</p>
             </div>
           </div>
         </div>
