@@ -1,23 +1,22 @@
 import React, { useState } from 'react';
 import { ArrowRight, Menu, X } from 'lucide-react';
+import dalada from './assets/Dalada.jpg';
+import galle from './assets/galle.jpg';
+import sigriya from './assets/Sigiriya.jpeg';
+import pol from './assets/Polonnaruwa.jpg';
+import pidur from './assets/pidurangala.jpg';
 
 export default function TourismWebsite() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-    const touristImages = [
-    'https://images.unsplash.com/photo-1599579810694-b5ac1795ce86?w=300&h=300&fit=crop',
-    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=300&fit=crop',
-    'https://images.unsplash.com/photo-1537225228614-56cc3556d7ed?w=300&h=300&fit=crop',
-    'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=300&h=300&fit=crop',
-    'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=300&h=300&fit=crop',
-  ];
+    const touristImages = [dalada, galle,sigriya, pol,pidur ];
   return (
     <div className="text-gray-900 font-sans" style={{ backgroundColor: '#F2F2F2' }}>
       {/* Navigation */}
       <nav className="flex justify-between items-center px-4 md:px-8 py-4 border-b border-gray-300" style={{ backgroundColor: '#F2F2F2' }}>
         <div className="flex items-center gap-3">
           <div className="w-6 h-6 rounded" style={{ backgroundColor: '#102550' }}></div>
-          <span className="font-bold text-base" style={{ color: '#102550' }}>Planora</span>
+          <span className="font-bold text-base font-sans"  style={{ color: '#102550' }}>Planora</span>
         </div>
         
         <div className="hidden md:flex gap-10 text-xs font-medium">
@@ -71,12 +70,12 @@ export default function TourismWebsite() {
           </div>
 
           {/* Image 4 - Bottom Right */}
-          <div className="absolute bottom-24 right-4 sm:right-8 md:right-12 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 hover:z-20">
+          <div className="absolute bottom-36 right-4 sm:right-8 md:right-12 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 hover:z-20">
             <img src={touristImages[3]} alt="Cultural experience" className="w-full h-full object-cover" />
           </div>
 
           {/* Image 5 - Bottom Right Lower */}
-          <div className="absolute bottom-4 right-12 sm:right-16 md:right-24 lg:right-32 w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-36 lg:h-36 rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 hover:z-20">
+          <div className="absolute bottom-10 right-20 sm:right-20 md:right-24 lg:right-32 w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-36 lg:h-36 rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 hover:z-20">
             <img src={touristImages[4]} alt="Travel memories" className="w-full h-full object-cover" />
           </div>
         </div>
